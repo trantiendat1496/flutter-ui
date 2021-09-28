@@ -21,7 +21,7 @@ class HomeBanner extends StatelessWidget {
           ),
           Container(color: darkColor.withOpacity(0.66)),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,

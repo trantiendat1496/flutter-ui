@@ -36,7 +36,9 @@ class Link extends StatelessWidget {
                 icon: SvgPicture.asset("assets/icons/linkedin.svg"),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/github');
+                },
                 icon: SvgPicture.asset("assets/icons/github.svg"),
               ),
               IconButton(

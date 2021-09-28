@@ -25,19 +25,21 @@ class MainScreen extends StatelessWidget {
               backgroundColor: bgColor,
             ),
       drawer: SideMenu(),
-      body: Center(
-        child: Container(
-          constraints: BoxConstraints(maxWidth: maxWidth),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if (Responsive.isDesktop(context))
+      body: Padding(
+        padding: const EdgeInsets.only(right: defaultPadding),
+        child: Center(
+          child: Container(
+            constraints: BoxConstraints(maxWidth: maxWidth),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if (Responsive.isDesktop(context))
+                  Expanded(
+                    flex: 2,
+                    child: SideMenu(),
+                  ),
+                SizedBox(width: defaultPadding),
                 Expanded(
-                  flex: 2,
-                  child: SideMenu(),
-                ),
-              SizedBox(width: defaultPadding),
-              Expanded(
                   flex: 7,
                   child: SingleChildScrollView(
                     child: Column(
@@ -45,8 +47,10 @@ class MainScreen extends StatelessWidget {
                         ...children,
                       ],
                     ),
-                  ))
-            ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

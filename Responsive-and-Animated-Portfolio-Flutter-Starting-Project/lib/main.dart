@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             ),
       ),
       home: HomeScreen(),
+      routes: {'github': (context) => const HomeScreen()},
     );
   }
 }
